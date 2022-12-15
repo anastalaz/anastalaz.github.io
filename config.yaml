@@ -1,0 +1,103 @@
+baseURL: "https://anastalaz.github.io/"
+languageCode: en-us
+title: anastalaz
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /blog
+      weight: 20
+    # - identifier: projects
+    #   name: Projects
+    #   url: /projects
+    #   weight: 30
+    # - identifier: experience
+    #   name: Experience
+    #   url: /experience
+    #   weight: 40
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 50
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enhanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Hi, this is Laz."
+    subtitle: I am a trained electrical and computer science engineer  currently working part time at the university. The purpose of this blog is to document my new journey as solopreneur trying to launch a profitable product in public.
+    imageUrl: "home/me.jpg"
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Resume
+    #     url: "https://"
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "twitter"
+      url: "https://twitter.com/anastalaz"
+    - name: "github"
+      url: "https://github.com/anastalaz"
+    - name: "email"
+      url: "mailto:anastalaz@gmail.com"
+   # - name: "linkedin"
+   #   url: "https://www.linkedin.com/"
+   # - name: "youtube"
+   #   url: "https://www.youtube.com/"
+   # - name: "cv"
+   #   url: "https://"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
